@@ -56,11 +56,11 @@ const CHAIN = 'polygon'; // only goerli, polygon, or ethereum
 const CONTRACT_NAME = 'PixelRunWorld';
 const CONTRACT_SYMBOL = 'PRW';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
-const OWNER_ADDRESS = '0x2Ae22245F644A99538Ac188A913d094b08F9E8b9';
-const TREASURY_ADDRESS = '0x2Ae22245F644A99538Ac188A913d094b08F9E8b9';
-const MAX_SUPPLY = 100; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
-const MINT_PRICE = 2; // Minting price per NFT. Goerli = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
-const TOKENS_PER_MINT = 2; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
+const OWNER_ADDRESS = 'YOUR WALLET ADDRESS HERE';
+const TREASURY_ADDRESS = 'YOUR WALLET ADDRESS HERE';
+const MAX_SUPPLY = 5000; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
+const MINT_PRICE = 0.01; // Minting price per NFT. Goerli = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
+const TOKENS_PER_MINT = 10; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.
 const PUBLIC_MINT_START_DATE = "2023-01-23T20:00:00+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
@@ -68,8 +68,8 @@ const PUBLIC_MINT_START_DATE = "2023-01-23T20:00:00+00:00"; // This is required.
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
 const PRESALE_MINT_START_DATE = null; // Optional. Eg: 2022-02-08T11:30:48+00:00
 const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
-const ROYALTY_ADDRESS = "0x2Ae22245F644A99538Ac188A913d094b08F9E8b9"; // Address that will receive the royalty
-const BASE_URI = "ipfs://bafybeidcqhg2rikbhwvnh2exxtd3qj3auplovmjgbseiae3hq76nilgmie/"; // only update if you want to manually set the base uri
+const ROYALTY_ADDRESS = "0xd8B808A887326F45B2D0cd999709Aa6264CeF919"; // Address that will receive the royalty
+const BASE_URI = null; // only update if you want to manually set the base uri
 const PREREVEAL_TOKEN_URI = null; // only update if you want to manually set the prereveal token uri
 const PRESALE_WHITELISTED_ADDRESSES = []; // only update if you want to manually set the whitelisted addresses
 
@@ -79,8 +79,8 @@ let CONTRACT_ADDRESS = "your contract address"; // If you want to manually inclu
 // Generic Metadata is optional if you want to reveal your NFTs
 const GENERIC = true; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
 const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
-const GENERIC_DESCRIPTION = "Get our NFTs Limited Collection"; // Replace with what you want the generic descriptions to say.
-const GENERIC_IMAGE = "https://ipfs.io/ipfs/bafkreih33kzq6mcoxz2m2ttlywro4fmw4jalxgxngilzkgfldmylqcqiwe"; // Replace with your generic image that will display for all NFTs pre-reveal.
+const GENERIC_DESCRIPTION = "REPLACE THIS"; // Replace with what you want the generic descriptions to say.
+const GENERIC_IMAGE = "https://ipfs.io/ipfs/QmUf9tDbkqnfHkQaMdFWSGAeXwVXWA61pFED7ypx4hcsfh"; // Replace with your generic image that will display for all NFTs pre-reveal.
 
 // Automatically set contract address if deployed using the deployContract.js script
 try {
@@ -107,7 +107,6 @@ const solanaMetadata = {
     },
   ],
 };
-
 
 const gif = {
   export: false,
